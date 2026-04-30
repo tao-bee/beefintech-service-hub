@@ -90,6 +90,70 @@ BeeFintech Service Hub 是一个面向保险科技客户的 Web 服务平台。�
 - `lucide-react`：图标库
 - `eslint` / `eslint-config-next`：代码检查
 
+## AI 协作技能安装
+
+本项目是多人协作项目，建议每位开发者在开始写代码前，先在自己的 Codex 环境中安装以下两个 skill：
+
+- `superpowers`：提供更完整的 AI 协作工作流能力，适合需求拆解、任务规划、验证、复盘和复杂协作场景。
+- `frontend-design`：用于前端页面、组件和交互的设计与实现，帮助首页、服务页和工具页保持更高的一致性和完成度。
+
+### 安装 `superpowers`
+
+推荐方式：打开 Codex，直接发送下面这句话，让 Codex 自动获取并执行官方安装说明：
+
+```text
+Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.codex/INSTALL.md
+```
+
+如果需要手动安装，macOS / Linux 可参考：
+
+```bash
+git clone https://github.com/obra/superpowers.git ~/.codex/superpowers
+mkdir -p ~/.agents/skills
+ln -s ~/.codex/superpowers/skills ~/.agents/skills/superpowers
+```
+
+Windows PowerShell 可参考：
+
+```powershell
+git clone https://github.com/obra/superpowers.git "$env:USERPROFILE\.codex\superpowers"
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills"
+cmd /c mklink /J "$env:USERPROFILE\.agents\skills\superpowers" "$env:USERPROFILE\.codex\superpowers\skills"
+```
+
+### 安装 `frontend-design`
+
+打开 Codex，使用内置的 `$skill-installer` 安装：
+
+```text
+$skill-installer install https://github.com/214140846/skills/tree/main/skills/.experimental/frontend-design
+```
+
+如果使用命令行安装，也可以参考：
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo 214140846/skills \
+  --path skills/.experimental/frontend-design
+```
+
+安装完成后，需要重启 Codex，确保新 skill 被加载。
+
+### 验证安装
+
+重启 Codex 后，可以让 Codex 执行：
+
+```text
+请列出当前可用的 skills，并确认 superpowers 和 frontend-design 是否已经加载。
+```
+
+如果团队成员本机已经存在对应目录，可以跳过重复安装：
+
+```bash
+ls ~/.agents/skills/superpowers
+ls ~/.codex/skills/frontend-design
+```
+
 ## 如何启动项目
 
 首次拉取项目后，先安装依赖：
