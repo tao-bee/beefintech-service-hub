@@ -449,6 +449,7 @@ tests/
 
 - `README.md`：项目说明和协作入口
 - `docs/SPEC.md`：需求文档
+- `docs/GIT_GUIDE.md`：非技术同事 Git 协作说明
 - `docs/PLAN.md`：执行规划文档
 - `docs/AI_COLLABORATION.md`：AI 协作记录
 - `docs/TESTING.md`：测试说明
