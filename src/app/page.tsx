@@ -30,7 +30,7 @@ const navItems = [
   { label: "客户场景", href: "#scenarios" },
   { label: "服务工具", href: "#tools" },
   { label: "客户价值", href: "#value" },
-  { label: "FAQ", href: "#tools" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 const capabilities = [
