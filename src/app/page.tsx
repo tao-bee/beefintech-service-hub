@@ -280,10 +280,10 @@ export default function Home() {
         <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_18%_18%,rgba(29,125,242,0.16),transparent_34%),radial-gradient(circle_at_78%_8%,rgba(15,158,179,0.16),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.9),rgba(248,251,255,0.58))]" />
         <div className="relative mx-auto grid max-w-7xl gap-12 px-5 pb-12 pt-12 lg:grid-cols-[0.98fr_1.02fr] lg:px-8 lg:pb-16 lg:pt-17">
           <div className="flex flex-col justify-center">
-            <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-lg border border-blue-100 bg-white/80 px-3 py-2 text-sm font-semibold text-[#1769cf] shadow-sm shadow-blue-950/5">
-              <Sparkles className="size-4" />
-              从官网升级为可运营的保险科技服务中心
-            </div>
+              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-lg border border-blue-100 bg-white/80 px-3 py-2 text-sm font-semibold text-[#1769cf] shadow-sm shadow-blue-950/5">
+                <Sparkles className="size-4" />
+                面向保险机构的数字化服务平台
+              </div>
             <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-5xl lg:text-6xl">
               BeeFintech 保险科技服务中心
             </h1>
@@ -391,15 +391,15 @@ export default function Home() {
                     <span>服务队列</span>
                     <span>状态</span>
                   </div>
-                  {[
-                    ["保司接口接入评估", "处理中"],
-                    ["渠道运营 FAQ 更新", "已发布"],
-                    ["数据安全说明补充", "待确认"],
-                  ].map(([name, state]) => (
-                    <div key={name} className="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-slate-100 px-4 py-3 last:border-b-0">
-                      <span className="text-sm text-slate-700">{name}</span>
-                      <span className="rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600">
-                        {state}
+                    {[
+                      ["保司接口接入评估", "进行中"],
+                      ["渠道运营支持方案", "可查看"],
+                      ["数据安全与合规说明", "已整理"],
+                    ].map(([name, state]) => (
+                      <div key={name} className="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-slate-100 px-4 py-3 last:border-b-0">
+                        <span className="text-sm text-slate-700">{name}</span>
+                        <span className="rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600">
+                          {state}
                       </span>
                     </div>
                   ))}
@@ -591,13 +591,13 @@ export default function Home() {
             <p className="mt-8 text-sm font-semibold text-cyan-300">预约演示</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">把业务场景交给我们拆解</h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-slate-300">
-              提交后，我们会根据你的业务场景安排产品演示或接入咨询。第一版接口使用 mock 响应，后续可对接邮件、企业微信或 CRM。
+              提交后，我们会根据你的业务场景安排产品演示或接入咨询，并由相关同事尽快与您联系。
             </p>
 
             <div className="mt-8 grid gap-3 text-sm text-slate-200">
               {[
                 { icon: CheckCircle2, text: "支持产品演示、系统接入、渠道合作等需求类型" },
-                { icon: ShieldCheck, text: "表单只做基础收集，不提交真实客户隐私到公开仓库" },
+                { icon: ShieldCheck, text: "支持根据业务要求补充数据安全与合规沟通" },
                 { icon: Headphones, text: "适合销售、实施和客户支持共同使用" },
               ].map((item) => {
                 const Icon = item.icon;

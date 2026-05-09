@@ -21,6 +21,10 @@ export type FaqItem = {
   keywords: string[];
 };
 
+export const faqMeta = {
+  lastUpdated: "2026-05-08",
+} as const;
+
 export const faqCategories: FaqCategory[] = [
   { id: "all", label: "全部问题", description: "覆盖接入、合作、安全、交付与售后常见问题。" },
   { id: "integration", label: "产品接入", description: "面向系统对接、接口准备和接入流程确认。" },
