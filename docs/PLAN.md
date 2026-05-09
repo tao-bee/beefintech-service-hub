@@ -18,6 +18,9 @@
 - `README.md`：项目目标、时间节点、交付要求和功能优先级
 - `docs/SPEC.md`：需求范围、页面结构和验收标准
 - `docs/FAQ.md`：FAQ 功能方案、数据结构和交互说明
+- `docs/AI_COLLABORATION.md`：AI 协作过程、Prompt 类型、人工调整和补救记录
+- `docs/TESTING.md`：命令验证、页面验收清单和待人工复核项
+- `docs/RETROSPECTIVE.md`：阶段复盘、问题总结和后续改进建议
 
 ## 2. 当前阶段目标
 
@@ -78,13 +81,15 @@
 - `docs/HOMEPAGE_DESIGN.md`
 - `docs/SKILLS_GUIDE.md`
 
-### 3.4 当前阶段仍需补齐的比赛材料
+### 3.4 当前阶段比赛材料状态
 
-当前尚未补齐的阶段文档包括：
+当前已补齐并需要持续维护的阶段文档包括：
 
 - `docs/AI_COLLABORATION.md`
 - `docs/TESTING.md`
 - `docs/RETROSPECTIVE.md`
+
+说明：以上三份材料是在 FAQ 分支功能实现后进行的过程证据补录，已明确标注前序实现未完整使用 superpowers 工作流，后续分支仍应在开发前先生成或更新对应计划文档。
 
 ### 3.5 当前阶段边界说明
 
@@ -107,9 +112,9 @@
 
 待补齐：
 
-- 手动测试记录，包括表单成功、失败和加载状态检查
-- 移动端浏览和导航体验检查记录
-- 当前阶段提交说明和展示口径整理
+- 结合 `docs/TESTING.md` 在合并前补充浏览器手动复核结果
+- 移动端浏览和导航体验截图或现场展示记录
+- 当前阶段最终提交说明和展示口径整理
 
 ### 任务 B：FAQ 功能确认与文档同步
 
@@ -123,8 +128,8 @@
 
 待补齐：
 
-- FAQ 内容继续向保险科技业务场景靠拢
-- 页面演示截图、浏览验证记录或现场展示说明
+- FAQ 内容后续继续向保险科技业务场景靠拢
+- 页面演示截图、浏览器手动复核结果或现场展示说明
 - 后续如页面行为调整，需要继续同步 `docs/FAQ.md`、`docs/SPEC.md` 和 `docs/PLAN.md`
 
 ### 任务 C：行业术语词典功能确认与文档同步
@@ -161,12 +166,12 @@
 - 当前项目已具备 `npm run lint`
 - 当前项目已具备 `npm run build`
 - FAQ 页面已纳入 Next.js 构建结果
+- 已新增 `docs/TESTING.md` 记录 FAQ 分支命令验证、构建输出和手动验收清单
 
 待补齐：
 
-- 形成当前阶段统一的测试说明文档 `docs/TESTING.md`
-- 补充首页、FAQ、行业术语词典、预约演示 API 的手动验证记录
-- 记录验证命令、验证时间和发现的问题处理情况
+- 合并前补充首页、FAQ、行业术语词典、预约演示 API 的浏览器手动验证结果
+- 如发现问题，继续在 `docs/TESTING.md` 记录现象、处理状态和复测结果
 
 ### 任务 F：比赛过程文档补齐
 
@@ -175,12 +180,13 @@
 - 需求文档、首页设计文档、Git 协作说明、Skills 使用说明已经存在
 - FAQ 功能方案文档已经独立沉淀
 - 执行规划文档已经建立
+- 已补齐 `docs/AI_COLLABORATION.md`、`docs/TESTING.md` 和 `docs/RETROSPECTIVE.md`
+- 已补充 `docs/superpowers/plans/2026-05-09-faq-page-docs-backfill.md` 作为 FAQ 分支事后补录计划
 
 待补齐：
 
-- `docs/AI_COLLABORATION.md`：记录 Prompt、AI 输出、人工调整和验证过程
-- `docs/TESTING.md`：记录命令验证和手动测试结果
-- `docs/RETROSPECTIVE.md`：记录阶段复盘、问题和改进建议
+- 后续每个功能分支继续补充对应 Prompt、验证结果和复盘内容
+- 避免再出现功能先完成、计划和过程材料事后补录的情况
 
 ### 任务 G：阶段成果整理与提交说明
 
@@ -271,6 +277,7 @@
 - `docs/TESTING.md`
 - `docs/AI_COLLABORATION.md`
 - `docs/RETROSPECTIVE.md`
+- `docs/superpowers/plans/2026-05-09-faq-page-docs-backfill.md`
 - 三个可展示的 Git 功能分支成果及合并结果
 
 ## 7. 风险与应对
@@ -296,6 +303,7 @@
 
 - 补齐 `docs/PLAN.md`、`docs/AI_COLLABORATION.md`、`docs/TESTING.md`、`docs/RETROSPECTIVE.md`
 - 记录关键 Prompt、实现过程、验证命令和人工调整内容
+- 后续新功能在实现前先补充 superpowers 计划，减少事后补录
 
 ### 7.3 P1 范围膨胀导致当前阶段失焦
 
@@ -345,7 +353,7 @@
 ### 8.4 比赛材料验收
 
 - 当前阶段已形成执行规划文档
-- 后续需要补齐测试说明、AI 协作记录和复盘材料
+- 已补齐测试说明、AI 协作记录和复盘材料，后续需随分支合并持续维护
 - 阶段成果能够同时展示“做了什么”“谁负责哪条分支”和“如何完成”
 
 ## 9. 当前阶段输出物清单
@@ -362,12 +370,16 @@
 - `docs/SPEC.md`
 - `docs/FAQ.md`
 - `docs/PLAN.md`
-
-### 9.3 待补材料
-
 - `docs/AI_COLLABORATION.md`
 - `docs/TESTING.md`
 - `docs/RETROSPECTIVE.md`
+- `docs/superpowers/plans/2026-05-09-faq-page-docs-backfill.md`
+
+### 9.3 待持续维护材料
+
+- 各功能分支的浏览器手动验收记录
+- 合并到 `dev` 后的统一构建验证记录
+- 后续新增功能对应的 superpowers 计划文档
 
 ### 9.4 验证产物
 
